@@ -1,0 +1,919 @@
+html {
+    box-sizing: border-box;
+}
+
+:root {
+    --praymare-text-color: #757575;
+    --title-text-color: #212121;
+    --logo-akcent-color: #2196F3;
+    --praymary-background-color: #FFFFFF;
+    --button-background-color: #F5F4FA;
+    --portfolio-border-color: #EEEEEE;
+    --header-border-color: #ECECEC;
+    --logo-text-color: #000000;
+    --hero-background-color: #C4C4C4;
+    --footer-color: #2F303A;
+    --icon-color: #AFB1B8;
+    --social-footer-background: rgba(255, 255, 255, 0.1);
+    
+
+
+}
+body {
+    margin: 0;
+    letter-spacing: 0.03em;
+    font-family: Roboto, sans-serif;
+    background-color:var(--praymary-background-color);
+    color:var(--praymare-text-color);
+}
+
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+}
+
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* скрыть h2 */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* Убираем подчёркивание */
+.site-nav,
+.portfolio-buttons,
+.examples-img,
+.contacts-footer,
+.main-benefits,
+.main-work,
+.team {
+    list-style: none;
+}
+
+.nav .logo,
+.footer-general .logo-footer,
+.examples-img .examples-link,
+.header-contacts .contact-info {
+    text-decoration: none;
+}
+
+/* шапка, навигация */
+
+.link:hover,
+.link:focus,
+.link:active,
+.link.current {
+    color: var(--logo-akcent-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+
+
+.header-contacts .contact:nth-child(1) {
+    margin-right: 50px;
+}
+
+.nav-link {
+    padding: 32px 0;
+}
+
+.nav-link.current {
+    position: relative;
+}
+
+.nav-link.current::after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 100%;
+    background-color:var(--logo-akcent-color);
+    border-radius: 2px;
+    bottom: 0;
+}
+
+
+.header-contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-left: 0;
+    list-style: none;
+
+}
+
+.contact-info.link {
+    padding: 32px 0;    
+}
+
+
+.nav-list:not(:last-child) {
+    margin-right: 50px;
+}
+
+.link-header {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.site-header {
+    border-bottom: 1px solid var(--header-border-color);
+}
+
+.link-conteiner {
+    display: flex;
+    justify-content: center;
+}
+
+.general-nav  {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    margin-left: 0;
+
+    font-family: Raleway, cursive;
+    color: var(--logo-text-color);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.logo-web {
+    color: var(--logo-akcent-color);
+}
+
+.nav .nav-list {
+    padding-left: 0;
+}
+.site-nav.general-nav {
+    padding-left: 0;
+}
+.nav-link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color:var(--title-text-color);
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    
+}
+.icon {
+    margin-right: 10px;
+    fill: var(--praymare-text-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+           
+}
+.contact:hover .icon,
+.contact:focus .icon,
+.contact:active .icon {
+    fill: var(--logo-akcent-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info {
+    max-width: 161px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--praymare-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+/* головна частина */
+.section-hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--hero-background-color);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/ImgHW4compr.jpg);
+    background-size: contain;
+    background-position: center;
+
+}
+
+.hero {
+    margin-bottom: 106px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color:var(--praymary-background-color);
+}
+.button-title {
+    border: none;
+    padding: 10px 32px;
+    cursor: pointer;
+    min-width: 216px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color:var(--praymary-background-color);
+    background:var(--logo-akcent-color);
+
+    
+   }
+
+   /* модальне вікно */
+
+   .backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   }
+
+   .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+
+
+   .modal{
+    position: absolute;
+    opacity: 1;
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--praymary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: scale(1), translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+   }
+
+    .backdrop.is-hidden .modal {
+    transform: scale(0.3);
+
+    }
+
+   .data-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background:var(--praymary-background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    }
+
+/* переваги */
+
+
+.benefits-icon {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+
+    background-color: var(--button-background-color);
+    border-radius: 4px;
+
+}
+
+.container.benefits-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.titl-benefits {
+    margin-bottom: 10px;
+    width: 270px;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.14;
+    color: var(--title-text-color);
+
+}
+
+.main-benefits li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.main-benefits {
+    padding-left: 0;
+    display: flex;
+}
+
+.descr-benefits {
+    width: 270px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* діяльність */
+
+.work-section{
+    padding-top: 82px;
+}
+
+.work-list {
+    display: flex;
+}
+.main-work .work-list:not(:last-child) {
+    margin-right: 30px;
+}
+
+.main-work {
+    display: flex;
+    padding-left: 0; 
+}
+
+.img-work {
+    display: block;
+
+}
+
+.desktop {
+    padding: 27px 106px;
+}
+.applications-overlay {
+    padding: 27px 112px;
+}
+
+.design-overlay {
+    padding: 27px 94px;
+}
+
+.work-img-overlay {
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.work-overlay {
+    width: 370px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(47, 48, 58, 0.8);
+
+}
+
+.work-titl {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--praymary-background-color);
+}
+
+
+/* команда */
+.team .team-link {
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
+    background-color: var(--praymary-background-color);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+}
+
+.section.section-team {
+    background-color: var(--button-background-color);
+}
+
+.team .team-link:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team {
+    display: flex;
+    padding-left: 0%;
+    
+}
+
+
+
+.social-conteiner {
+    display: flex;
+    max-width: 206px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.conteiner-team {
+    display: inline-block;
+    padding-top: 94px;
+}
+
+.titl-main {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+
+
+.team-icon {
+    padding: 12px;
+    fill:var(--icon-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
+}
+
+.social-link:hover .team-icon,
+.social-link:focus .team-icon {
+    fill: var(--praymary-background-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+.social-link {
+    border-radius: 50%;
+    background-color: var(--praymary-background-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--logo-akcent-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+
+
+.team .social-link:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+.descr-job {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.titl-name {
+    margin-top: 30px;
+    min-width: 104px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color:var(--title-text-color);
+}
+
+/* клієнти */
+
+.client-icon {
+    display: block;
+    fill: var(--icon-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.client-link:hover,
+.client-link:focus{
+    border: 1px solid var(--logo-akcent-color);
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+    fill: var(--logo-akcent-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.client-link {
+    padding: 16px 32px;
+    min-width: 170px;
+    border: 1px solid var(--icon-color);
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    justify-content: center;
+
+
+}
+.clients .client-link:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* портфолио button */
+
+
+.list-portfolio {
+    padding: 20px 22px;
+    min-width: 322px;
+    border: 1px solid var(--portfolio-border-color)
+}
+
+.examples-img {
+    margin-top: 50px;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: 1.13%;
+
+}
+
+.button {
+    border: none;
+    box-sizing: border-box;
+}
+
+.portfolio-buttons {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.portfolio-buttons li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.titl-portfolio {
+    margin-bottom: 4px;
+    min-width: 322px;
+    
+    color: var(--title-text-color);
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;
+
+}
+
+.img-portfolio {
+    margin-right: 0;
+    display: block;
+ }
+
+.btn {
+    margin-bottom: 50px;
+    width: 1200px;
+    display: inline;
+    text-align: center;
+}
+
+.all {
+    min-width: 73px;
+}
+.web {
+    min-width: 125px;
+}
+
+.applications {
+    min-width: 112px;
+}
+
+.design {
+    min-width: 103px;
+}
+
+.marketing {
+    min-width: 130px;
+} 
+
+/* оверлей */
+
+.titl-overlay {
+    font-size: 18px;
+    line-height: 1.55;
+
+}
+
+.img-portfolio-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    color: var(--praymary-background-color);
+    background-color:var(--logo-akcent-color);
+    
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.examples-img .example-list:hover .examples-link .overlay,
+.examples-img .example-list:focus .examples-link .overlay {
+    transform: translateY(0);
+
+
+}
+
+
+/* оверлей */
+
+.example-list {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.example-list:hover,
+.example-list:focus {
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 16%), 0 4px 4px 0 rgba(0, 0, 0, 25%);
+
+}
+
+.button.examples {
+    padding: 6px 22px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    border-radius: 4px;
+    background-color: var(--button-background-color);
+    color: var(--title-text-color);
+
+    transition: box-shadow  250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--logo-akcent-color);
+    color: var(--praymary-background-color);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+.descr-type {
+    min-width: 322px;
+
+    color: var(--praymare-text-color);
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+.example {
+    font-size: 24px;
+    color: var(--title-text-color);
+    font-style: italic;
+}
+
+.example-deskr {
+    font-style: initial;
+}
+
+/* футер */
+
+
+.contact-footer {
+    display: block;
+    text-decoration: none;
+    min-width: 231px;
+    margin-bottom: 9px;
+    padding-left: 0;
+    margin-left: 0;
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.contacts-footer {
+    padding-left: 0;
+
+
+} 
+
+.contact-descr {
+    min-width: 231px;
+    padding-left: 0;
+    margin-bottom: 9px;
+}
+
+.container.footer-site {
+    display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer-general {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background:var(--footer-color);
+}
+
+.contact-list {
+    padding: 0;
+    margin: 0;
+}
+
+.contacts-footer .contact-list:not(:last-child) {
+    margin-bottom: 9px;
+}
+.contact {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--praymary-background-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.logo-footer {
+    margin-bottom: 20px;
+    margin-left: 0;
+    display: block;
+   
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    font-family: Raleway, cursive;
+    color: var(--praymary-background-color);
+}
+
+.contact-footer:hover,
+.contact-footer:focus {
+    color: var(--logo-akcent-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-titl {
+
+    margin-bottom: 20px;
+    color: var(--praymary-background-color);
+    text-transform: uppercase;
+    font-size: 14px;
+   
+}
+
+.footer-primary {
+    margin-right: 70px;
+}
+
+.foter-secondary {
+    margin-top: 12px;
+    height: 80px;
+}
+
+.footer-social {
+    display: flex;
+    padding-left: 0%;
+
+}
+
+.social-link-footer {
+    list-style: none;
+    background-color: var(--social-footer-background);
+    border-radius: 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: var(--logo-akcent-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.footer-social-conteiner {
+    display: flex;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-link-footer {
+    min-width: 206px;
+
+}
+
+.social-link-footer:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+.footer-icon {
+    padding: 12px;
+    fill: var(--praymary-background-color);
+
+}
+
+
+
+
+
+
