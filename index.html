@@ -65,7 +65,7 @@
       <section class="section-hero">
         <div class="hero">
           <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button-title" data-modal-open>Замовити послугу</button>
+          <button type="submit" class="button-title" data-modal-open>Замовити послугу</button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <h2 class="form-titl">Залиште свої дані, ми вам передзвонимо</h2>
@@ -96,7 +96,6 @@
                   <textarea
                     class="form-textarea"
                     id="userfeedback"
-                    type="text"
                     name="feedback"
                     placeholder="Введіть текст"
                   ></textarea>
@@ -112,9 +111,9 @@
                   </div>
                 </div>
 
-                <buttonc class="button-form" type="submit">Відправити</buttonc>
+                <button class="button-form" type="submit">Відправити</button>
               </form>
-              <button class="data-modal-close" data-modal-close>X</button>
+              <button class="data-modal-close" type="submit" data-modal-close>X</button>
             </div>
           </div>
         </div>
@@ -482,7 +481,7 @@
         <form class="form-footer">
           <h2 class="footer-titl">Підпишіться на розсилку</h2>
           <div class="footer-form-conteiner">
-            <input class="footer-input" type="text" placeholder="E-mail" />
+            <input class="footer-input" type="text" name="subscription" placeholder="E-mail" />
             <button class="footer-button" type="submit">
               Підписатися
               <svg class="btn-icon" width="24" height="24">
