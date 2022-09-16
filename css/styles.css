@@ -347,11 +347,10 @@ p {
 
     }
 
-    .data-modal-close:hover {
-        color: var(--logo-akcent-color);
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .data-modal-close:hover .svg-modal-close {
+        fill: var(--logo-akcent-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
 
     .form-titl {
         max-width: 448px;
@@ -1138,6 +1137,7 @@ p {
     border-radius: 4px;
     background-color: var(--footer-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
+   
     
 }
 
